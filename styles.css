@@ -139,10 +139,10 @@ main { position: relative; z-index: 1; max-width: 1600px; width: 100%; margin: 0
 .fighter-card:hover .fighter-avatar,
 .fighter-card.is-open .fighter-avatar { border-color: var(--gold); }
 .fighter-text { display: flex; flex-direction: column; min-width: 0; }
-.fighter-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.4rem, 4vw, 2rem); letter-spacing: 0.06em; line-height: 1; color: var(--white); transition: color 0.3s; }
+.fighter-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.1rem, 3.5vw, 2rem); letter-spacing: 0.06em; line-height: 1; color: var(--white); transition: color 0.3s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .fighter-card:hover .fighter-name, .fighter-card.is-open .fighter-name { color: var(--gold-bright); }
 
-.fighter-record { margin-top: 5px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.15em; color: var(--grey); display: flex; gap: 4px; align-items: center; }
+.fighter-record { margin-top: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; color: var(--grey); display: flex; gap: 3px; align-items: center; white-space: nowrap; flex-wrap: nowrap; }
 .rec-win  { color: #4caf72; } .rec-sep  { color: #333; } .rec-loss { color: #e05555; } .rec-draw { color: #e8822a; }
 
 .record-badge { padding: 20px 18px; text-align: right; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.08em; color: #333; white-space: nowrap; transition: color 0.3s; border-left: 1px solid #1a1a1a; }
