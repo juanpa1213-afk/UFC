@@ -144,8 +144,8 @@ function updateImportBanner() {
   const status = document.getElementById('import-status');
   const banner = document.getElementById('importBanner');
 
-  const hasFighters = fighters.length > 0 && localStorage.getItem(LS_FIGHTERS);
-  const hasEvents   = APB_EVENTS.length > 0 && localStorage.getItem(LS_EVENTS);
+  const hasFighters = fighters.length > 0;
+  const hasEvents   = APB_EVENTS.length > 0;
   const hasImages   = Object.keys(imageCache).length > 0;
 
   if (fBtn) fBtn.classList.toggle('connected', !!hasFighters);
@@ -845,9 +845,49 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
 // ─────────────────────────────────────────
 //  ARRANQUE
 // ─────────────────────────────────────────
-loadInitialData();
-recalcAllRecords();
-buildRankingTab();
-buildAPBTab();
-buildTimelineTab();
-updateImportBanner();
+async function init() {
+  let fetchedFighters = false;
+  let fetchedEvents   = false;
+
+  // 1. Intentar cargar los JSON desde el servidor (fetch automático)
+  try {
+    const [rf, re] = await Promise.all([
+      fetch('fighters.json'),
+      fetch('events.json'),
+    ]);
+    if (rf.ok && re.ok) {
+      fighters   = await rf.json();
+      APB_EVENTS = migrateEvents(await re.json());
+      localStorage.setItem(LS_FIGHTERS, JSON.stringify(fighters));
+      localStorage.setItem(LS_EVENTS,   JSON.stringify(APB_EVENTS));
+      fetchedFighters = true;
+      fetchedEvents   = true;
+    }
+  } catch (_) { /* sin servidor o error de red — fallback a localStorage */ }
+
+  // 2. Si fetch falló, intentar localStorage; si no hay nada, usar defaults
+  if (!fetchedFighters || !fetchedEvents) {
+    loadInitialData();
+  }
+
+  recalcAllRecords();
+  buildRankingTab();
+  buildAPBTab();
+  buildTimelineTab();
+
+  // 3. Ocultar el banner si los datos vinieron del servidor
+  if (fetchedFighters && fetchedEvents) {
+    const banner = document.getElementById('importBanner');
+    if (banner) {
+      banner.classList.add('connected');
+      document.body.classList.add('import-hidden');
+    }
+    // El banner de importar solo aparece si el usuario quiere reemplazar datos
+    document.getElementById('import-status').textContent = 'Datos cargados automáticamente';
+    document.getElementById('import-status').className = 'import-status-text ok';
+  } else {
+    updateImportBanner();
+  }
+}
+
+init();
