@@ -1,0 +1,545 @@
+[
+  {
+    "id": 1,
+    "name": "UFC 1:",
+    "date": "12 Sept 2025",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "The Snuf Snuf Machine vs Super Raul",
+        "f1": "The Snuf Snuf Machine",
+        "f2": "Super Raul",
+        "winner": "The Snuf Snuf Machine",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "Middleweight Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 2,
+    "name": "UFC 2:",
+    "date": "19 Sept 2025",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Nun-Kal Gym vs JAlvarez el 'Dueño del Sistema'",
+        "f1": "Nun-Kal Gym",
+        "f2": "JAlvarez el 'Dueño del Sistema'",
+        "winner": "Nun-Kal Gym",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "Detonator Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 3,
+    "name": "UFC 3 The Fat Night:",
+    "date": "26 Sept 2025",
+    "arena": "Wembley Center",
+    "fights": [
+      {
+        "subtitle": "GutiGamerPro777 vs Der Kaiser",
+        "f1": "GutiGamerPro777",
+        "f2": "Der Kaiser",
+        "winner": "Der Kaiser",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "Very Heavyweight Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 4,
+    "name": "UFC 4:",
+    "date": "31 Oct 2025",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "JP 'Little Dick' Fajardo vs German Joven",
+        "f1": "JP 'Little Dick' Fajardo",
+        "f2": "German Joven",
+        "winner": "German Joven",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "Very Small Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 5,
+    "name": "UFC 5:",
+    "date": "7 Nov 2025",
+    "arena": "South City Arena",
+    "fights": [
+      {
+        "subtitle": "Albeiro Puvalgia  vs JAlvarez el 'Dueño del Sistema'",
+        "f1": "Albeiro Puvalgia",
+        "f2": "JAlvarez el 'Dueño del Sistema'",
+        "winner": "JAlvarez el 'Dueño del Sistema'",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "Welterweight Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 6,
+    "name": "JP's UFC Fight Night:",
+    "date": "14 Nov 2025",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "JP 'Little Dick' Fajardo vs JP Reus Álvarez",
+        "f1": "JP 'Little Dick' Fajardo",
+        "f2": "JP Reus Álvarez",
+        "winner": "JP Reus Álvarez",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": "",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 7,
+    "name": "UFC 6:",
+    "date": "28 Nov 2025",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "GutiGamerPro777 vs Jeffrey Epstein",
+        "f1": "GutiGamerPro777",
+        "f2": "Jeffrey Epstein",
+        "winner": "Jeffrey Epstein",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The DSP Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 8,
+    "name": "UFC 7:",
+    "date": "6 Feb 2026",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Albeiro Puvalgia  vs JAlvarez el 'Dueño del Sistema' 2",
+        "f1": "Albeiro Puvalgia",
+        "f2": "JAlvarez el 'Dueño del Sistema'",
+        "winner": "JAlvarez el 'Dueño del Sistema'",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The IEEE President Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 9,
+    "name": "UFC 8:",
+    "date": "13 Feb 2026",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Nun-Kal Gym vs Zinpelin Duzzan",
+        "f1": "Nun-Kal Gym",
+        "f2": "Zinpelin Duzzan",
+        "winner": null,
+        "method": "No Fighter Defeated",
+        "isDraw": true,
+        "isTitleBout": true,
+        "titleBoutName": "The Cold War Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 10,
+    "name": "UFC 9:",
+    "date": "20 Feb 2026",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Nun-Kal Gym vs German Joven",
+        "f1": "Nun-Kal Gym",
+        "f2": "German Joven",
+        "winner": null,
+        "method": "No Fighter Defeated",
+        "isDraw": true,
+        "isTitleBout": true,
+        "titleBoutName": "The Edits Armistice Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 11,
+    "name": "UFC 10:",
+    "date": "27 feb 2026",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Michelo White vs German Joven",
+        "f1": "Michelo White",
+        "f2": "German Joven",
+        "winner": "German Joven",
+        "method": "Split Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The Morrongo Guache Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 12,
+    "name": "UFC 11:",
+    "date": "06 Mar 2026",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Der Kaiser vs JAlvarez el 'Dueño del Sistema'",
+        "f1": "Der Kaiser",
+        "f2": "JAlvarez el 'Dueño del Sistema'",
+        "winner": "Der Kaiser",
+        "method": "Split Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The Therian Freedom Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 13,
+    "name": "UFC 12:",
+    "date": "13 Mar 2026",
+    "arena": "Arena Panenka",
+    "fights": [
+      {
+        "subtitle": "Albeiro Puvalgia vs Zinpelin Duzzan",
+        "f1": "Albeiro Puvalgia",
+        "f2": "Zinpelin Duzzan",
+        "winner": "Zinpelin Duzzan",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The Hairloss Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "isPending": false,
+    "penalties": []
+  },
+  {
+    "id": 14,
+    "name": "UFC 13:",
+    "date": "20 Mar 2026",
+    "arena": "Arena Panenka",
+    "isPending": false,
+    "fights": [
+      {
+        "subtitle": "Michelo White vs German Joven 2",
+        "f1": "Michelo White",
+        "f2": "German Joven",
+        "winner": "Michelo White",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The Edits Cold War Championship Bout",
+        "bonus": 5,
+        "underdogName": "Michelo White"
+      },
+      {
+        "subtitle": "Nun-Kal Gym vs Zinpelin Duzzan 2",
+        "f1": "Nun-Kal Gym",
+        "f2": "Zinpelin Duzzan",
+        "winner": "Nun-Kal Gym",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The Minoxidil Conspiracy Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": [
+      {
+        "fighter": "Zinpelin Duzzan",
+        "pts": 20
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "UFC 14:",
+    "date": "10 Apr 2026",
+    "arena": "Arena Panenka",
+    "isPending": false,
+    "fights": [
+      {
+        "subtitle": "Juan Sevilla Vargas vs JP Reus Álvarez",
+        "f1": "Juan Sevilla Vargas",
+        "f2": "JP Reus Álvarez",
+        "winner": "JP Reus Álvarez",
+        "method": "Split Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "The Sevilla Park Throne Championship Bout",
+        "bonus": 0,
+        "underdogName": null
+      },
+      {
+        "subtitle": "GutiGamerPro777 vs JP 'Little Dick' Fajardo",
+        "f1": "GutiGamerPro777",
+        "f2": "JP 'Little Dick' Fajardo",
+        "winner": "JP 'Little Dick' Fajardo",
+        "method": "Split Decision",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": "",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ],
+    "penalties": []
+  },
+  {
+    "id": 17,
+    "name": "UFC 15:",
+    "date": "17 Abr 2026",
+    "arena": "8 GOL",
+    "isPending": false,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "Zinpelin Duzzan vs German Joven",
+        "f1": "Zinpelin Duzzan",
+        "f2": "German Joven",
+        "winner": "German Joven",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "THE SPS PRESIDENT CHAMPIONSHIP BOUT",
+        "bonus": 0,
+        "underdogName": null
+      },
+      {
+        "subtitle": "Albeiro Puvalgia vs Michelo White",
+        "f1": "Albeiro Puvalgia",
+        "f2": "Michelo White",
+        "winner": "Michelo White",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": "",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "UFC FIGHT NIGHT:",
+    "date": "20 ABR 2026",
+    "arena": "8 GOL",
+    "isPending": false,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "German Joven vs GutiGamerPro777",
+        "f1": "German Joven",
+        "f2": "GutiGamerPro777",
+        "winner": "German Joven",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": "",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "UFC 16 THE FAT NIGHT 2",
+    "date": "24 ABR 2026",
+    "arena": "8 GOL",
+    "isPending": false,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "Kevin Roldan vs Der Kaiser",
+        "f1": "Kevin Roldan",
+        "f2": "Der Kaiser",
+        "winner": "Kevin Roldan",
+        "method": "KO",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "EL ASESINO CHAMPIONSHIP BOUT",
+        "bonus": 0,
+        "underdogName": null
+      },
+      {
+        "subtitle": "Nun-Kal Gym vs GutiGamerPro777",
+        "f1": "Nun-Kal Gym",
+        "f2": "GutiGamerPro777",
+        "winner": "Nun-Kal Gym",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "VERY ULTRA HEAVYWEIGHT CHAMPIONSHIP BOUT",
+        "bonus": 0,
+        "underdogName": null
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "UFC FIGHT NIGHT",
+    "date": "27 ABR 2026",
+    "arena": "Arena Panenka",
+    "isPending": true,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "El Futbolista PSOE vs Batman Dortmund",
+        "f1": "El Futbolista PSOE",
+        "f2": "Batman Dortmund",
+        "winner": "El Futbolista PSOE",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": ""
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "UFC 17",
+    "date": "30 ABR 2026",
+    "arena": "Arena Panenka",
+    "isPending": true,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "JP Reus Álvarez vs JP 'Little Dick' Fajardo 2",
+        "f1": "JP Reus Álvarez",
+        "f2": "JP 'Little Dick' Fajardo",
+        "winner": "JP Reus Álvarez",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "THE CUSTODY OF MINI JP CHAMPIONSHIP BOUT"
+      },
+      {
+        "subtitle": "JAlvarez el 'Dueño del Sistema' vs Albeiro Puvalgia 3",
+        "f1": "JAlvarez el 'Dueño del Sistema'",
+        "f2": "Albeiro Puvalgia",
+        "winner": "JAlvarez el 'Dueño del Sistema'",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": ""
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "UFC 18",
+    "date": "8 MAY 2026",
+    "arena": "Arena Panenka",
+    "isPending": true,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "Jeffrey Epstein vs Juan Sevilla Vargas",
+        "f1": "Jeffrey Epstein",
+        "f2": "Juan Sevilla Vargas",
+        "winner": "Jeffrey Epstein",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": true,
+        "titleBoutName": "COACH OF THE COACH CHAMPIONSHIP BOUT"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "UFC 19",
+    "date": "15 MAY 2026",
+    "arena": "Arena Panenka",
+    "isPending": true,
+    "penalties": [],
+    "fights": [
+      {
+        "subtitle": "Nun-Kal Gym vs JP 'Little Dick' Fajardo",
+        "f1": "Nun-Kal Gym",
+        "f2": "JP 'Little Dick' Fajardo",
+        "winner": "Nun-Kal Gym",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": ""
+      },
+      {
+        "subtitle": "GutiGamerPro777 vs Michelo White",
+        "f1": "GutiGamerPro777",
+        "f2": "Michelo White",
+        "winner": "GutiGamerPro777",
+        "method": "Decision",
+        "isDraw": false,
+        "isTitleBout": false,
+        "titleBoutName": ""
+      }
+    ]
+  }
+]

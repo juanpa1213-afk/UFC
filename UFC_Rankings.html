@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OFFICIAL COMBAT RANKING</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ══ IMPORT BANNER ══ -->
+  <div id="importBanner" class="import-banner">
+    <div class="import-banner-inner">
+      <div class="import-files">
+        <label class="import-file-btn" id="import-btn-fighters">
+          <span class="import-dot"></span>fighters.json
+          <input type="file" accept=".json" id="input-fighters" style="display:none" onchange="loadFightersFile(this)">
+        </label>
+        <label class="import-file-btn" id="import-btn-events">
+          <span class="import-dot"></span>events.json
+          <input type="file" accept=".json" id="input-events" style="display:none" onchange="loadEventsFile(this)">
+        </label>
+        <label class="import-file-btn" id="import-btn-images">
+          <span class="import-dot"></span>img/
+          <input type="file" accept="image/*" multiple id="input-images" style="display:none" onchange="loadImagesFiles(this)">
+        </label>
+      </div>
+      <span id="import-status" class="import-status-text">Importa tus archivos para cargar datos</span>
+    </div>
+  </div>
+
+
+  <!-- ── NAVEGACIÓN ── -->
+  <nav class="tab-nav" id="tabNav">
+    <button class="tab-btn active" data-tab="ranking">Ranking</button>
+    <button class="tab-btn"        data-tab="apb">Historic</button>
+    <button class="tab-btn"        data-tab="timeline">Timeline</button>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       TAB: RANKING
+  ══════════════════════════════════════ -->
+  <div class="tab-content active" id="tab-ranking">
+    <div id="ranking-export">
+      <header>
+        <p class="header-eyebrow">UFC Official</p>
+        <h1 class="header-title">Rankings</h1>
+        <p class="header-sub">2026 Season &bull; All Weights</p>
+        <div class="gold-line"></div>
+      </header>
+      <main>
+        <p class="section-label">Pound-For-Pound Official Ranking</p>
+        <div class="ranking-list" id="rankingList"></div>
+      </main>
+      <footer>2026 &bull; Pound-For-Pound Ranking &bull; All rights reserved</footer>
+    </div>
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: HISTORIC
+  ══════════════════════════════════════ -->
+  <div class="tab-content" id="tab-apb">
+    <div class="apb-page" id="apb-export">
+      <div class="apb-header">
+        <p class="header-eyebrow">UFC Historical</p>
+        <h2>Record</h2>
+        <p class="header-sub">Official Event History &bull; All Championships</p>
+        <div class="gold-line"></div>
+      </div>
+      <div id="apbEventsList"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TAB: TIMELINE
+  ══════════════════════════════════════ -->
+  <div class="tab-content" id="tab-timeline">
+    <div class="tl-page">
+      <div class="tl-page-header">
+        <p class="header-eyebrow">UFC Historical</p>
+        <h2 class="tl-page-title">Timeline</h2>
+        <p class="header-sub">Ranking Evolution &bull; By Event</p>
+        <div class="gold-line" style="opacity:1;animation:none;margin-top:16px"></div>
+      </div>
+      <div class="tl-selector-wrap">
+        <div class="tl-event-selector" id="tlEventSelector"></div>
+      </div>
+      <div id="tlRankingView"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
