@@ -93,7 +93,7 @@ function loadFightersFile(input) {
       localStorage.setItem(LS_FIGHTERS, JSON.stringify(fighters));
       recalcAllRecords();
       buildRankingTab(); buildAPBTab(); buildTimelineTab();
-      updateImportBanner();
+      hideBannerIfDataLoaded();
       showToast('fighters.json cargado');
     } catch { showToast('Error al leer fighters.json'); }
   };
@@ -110,7 +110,7 @@ function loadEventsFile(input) {
       localStorage.setItem(LS_EVENTS, JSON.stringify(APB_EVENTS));
       recalcAllRecords();
       buildRankingTab(); buildAPBTab(); buildTimelineTab();
-      updateImportBanner();
+      hideBannerIfDataLoaded();
       showToast('events.json cargado');
     } catch { showToast('Error al leer events.json'); }
   };
@@ -128,7 +128,7 @@ function loadImagesFiles(input) {
       loaded++;
       if (loaded === files.length) {
         buildRankingTab(); buildAPBTab(); buildTimelineTab();
-        updateImportBanner();
+        hideBannerIfDataLoaded();
         showToast(`${loaded} imagen${loaded > 1 ? 'es' : ''} cargada${loaded > 1 ? 's' : ''}`);
       }
     };
@@ -846,27 +846,25 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
 //  ARRANQUE
 // ─────────────────────────────────────────
 async function init() {
-  let fetchedFighters = false;
-  let fetchedEvents   = false;
-
   // 1. Intentar cargar los JSON desde el servidor (fetch automático)
   try {
+    const base = document.baseURI.replace(/[^/]*$/, '');
     const [rf, re] = await Promise.all([
-      fetch('fighters.json'),
-      fetch('events.json'),
+      fetch(base + 'fighters.json'),
+      fetch(base + 'events.json'),
     ]);
     if (rf.ok && re.ok) {
       fighters   = await rf.json();
       APB_EVENTS = migrateEvents(await re.json());
       localStorage.setItem(LS_FIGHTERS, JSON.stringify(fighters));
       localStorage.setItem(LS_EVENTS,   JSON.stringify(APB_EVENTS));
-      fetchedFighters = true;
-      fetchedEvents   = true;
+      console.log('[UFC] JSON cargados via fetch OK');
+    } else {
+      console.warn('[UFC] fetch respondió pero no ok:', rf.status, re.status);
+      loadInitialData();
     }
-  } catch (_) { /* sin servidor o error de red — fallback a localStorage */ }
-
-  // 2. Si fetch falló, intentar localStorage; si no hay nada, usar defaults
-  if (!fetchedFighters || !fetchedEvents) {
+  } catch (err) {
+    console.warn('[UFC] fetch falló, usando localStorage/defaults:', err);
     loadInitialData();
   }
 
@@ -875,15 +873,17 @@ async function init() {
   buildAPBTab();
   buildTimelineTab();
 
-  // 3. Ocultar el banner si los datos vinieron del servidor
-  if (fetchedFighters && fetchedEvents) {
-    const banner = document.getElementById('importBanner');
-    if (banner) {
-      banner.classList.add('connected');
-      document.body.classList.add('import-hidden');
-    }
-    // El banner de importar solo aparece si el usuario quiere reemplazar datos
-    document.getElementById('import-status').textContent = 'Datos cargados automáticamente';
+  // 2. Ocultar el banner siempre que haya datos cargados
+  hideBannerIfDataLoaded();
+}
+
+function hideBannerIfDataLoaded() {
+  const banner = document.getElementById('importBanner');
+  if (!banner) return;
+  if (fighters.length > 0 && APB_EVENTS.length > 0) {
+    banner.classList.add('connected');
+    document.body.classList.add('import-hidden');
+    document.getElementById('import-status').textContent = 'Datos cargados';
     document.getElementById('import-status').className = 'import-status-text ok';
   } else {
     updateImportBanner();
