@@ -192,12 +192,11 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
 
 .tab-nav {
   position: relative; z-index: 10;
-  display: flex; justify-content: center; gap: 0;
+  display: flex; justify-content: stretch; gap: 0;
   background: var(--dark);
   border-bottom: 2px solid var(--gold-dim);
   padding: 0;
   width: 100%;
-  overflow: hidden;
 }
 .tab-btn {
   font-family: 'Bebas Neue', sans-serif;
@@ -215,6 +214,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   flex: 1;
   text-align: center;
   white-space: nowrap;
+  min-width: 0;
 }
 .tab-btn:hover { color: var(--gold-dim); }
 .tab-btn.active { color: var(--gold-bright); border-bottom-color: var(--gold); }
@@ -223,9 +223,9 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
 
 @media (max-width: 560px) {
   .tab-btn {
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
-    padding: 14px 0;
+    font-size: clamp(0.7rem, 3.5vw, 1rem);
+    letter-spacing: 0.06em;
+    padding: 14px 4px;
   }
 }
 
