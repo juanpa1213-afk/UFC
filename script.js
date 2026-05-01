@@ -23,7 +23,7 @@ const LS_EVENTS    = 'ufc_events_v2';
 //  DATOS POR DEFECTO
 // ─────────────────────────────────────────
 const DEFAULT_FIGHTERS = [
-  { name: "JP Reus Álvarez",                   w:1, wko:0, wsplit:0, l:0, lko:0, lsplit:0, d:0 },
+  { name: "JP 'MAKÉLÉLÉ' Álvarez",              w:1, wko:0, wsplit:0, l:0, lko:0, lsplit:0, d:0 },
   { name: "Nun-Kal Gym",                        w:1, wko:1, wsplit:0, l:0, lko:0, lsplit:0, d:2 },
   { name: "German Joven",                       w:1, wko:1, wsplit:0, l:0, lko:0, lsplit:0, d:1 },
   { name: "JP 'Little Dick' Fajardo",           w:0, wko:0, wsplit:0, l:2, lko:1, lsplit:0, d:0 },
