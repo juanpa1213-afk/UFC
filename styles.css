@@ -27,6 +27,7 @@ body::before {
   pointer-events: none; z-index: 0; opacity: 0.4;
   transition: opacity 0.1s;
 }
+body.no-overlay::before { opacity: 0; }
 
 /* ── HEADER ── */
 header {
@@ -64,6 +65,18 @@ header::before {
 }
 
 /* ── EXPORT BUTTON ── */
+.export-wrap-outer { position: fixed; bottom: 30px; right: 30px; z-index: 100; }
+.export-btn {
+  font-family: 'Rajdhani', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--black);
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  border: none; cursor: pointer; padding: 11px 26px;
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  transition: filter 0.25s, transform 0.2s; box-shadow: 0 4px 20px rgba(200,168,75,0.4);
+}
+.export-btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
+.export-btn:active { transform: translateY(0); }
+.export-btn.loading { opacity: 0.6; pointer-events: none; }
 
 /* ── CAPTURE OVERRIDES ── */
 #ranking-export.capturing { padding-bottom: 40px; }
@@ -139,10 +152,10 @@ main { position: relative; z-index: 1; max-width: 1600px; width: 100%; margin: 0
 .fighter-card:hover .fighter-avatar,
 .fighter-card.is-open .fighter-avatar { border-color: var(--gold); }
 .fighter-text { display: flex; flex-direction: column; min-width: 0; }
-.fighter-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.1rem, 3.5vw, 2rem); letter-spacing: 0.06em; line-height: 1; color: var(--white); transition: color 0.3s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fighter-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.4rem, 4vw, 2rem); letter-spacing: 0.06em; line-height: 1; color: var(--white); transition: color 0.3s; }
 .fighter-card:hover .fighter-name, .fighter-card.is-open .fighter-name { color: var(--gold-bright); }
 
-.fighter-record { margin-top: 4px; font-family: 'Rajdhani', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; color: var(--grey); display: flex; gap: 3px; align-items: center; white-space: nowrap; flex-wrap: nowrap; }
+.fighter-record { margin-top: 5px; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.15em; color: var(--grey); display: flex; gap: 4px; align-items: center; }
 .rec-win  { color: #4caf72; } .rec-sep  { color: #333; } .rec-loss { color: #e05555; } .rec-draw { color: #e8822a; }
 
 .record-badge { padding: 20px 18px; text-align: right; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.08em; color: #333; white-space: nowrap; transition: color 0.3s; border-left: 1px solid #1a1a1a; }
@@ -190,44 +203,12 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   .download-card-wrap { padding-left: 20px; }
 }
 
-.tab-nav {
-  position: relative; z-index: 10;
-  display: flex; justify-content: stretch; gap: 0;
-  background: var(--dark);
-  border-bottom: 2px solid var(--gold-dim);
-  padding: 0;
-  width: 100%;
-}
-.tab-btn {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.15rem;
-  letter-spacing: 0.25em;
-  color: #444;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 16px 40px;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  transition: color 0.25s, border-color 0.25s;
-  text-transform: uppercase;
-  flex: 1;
-  text-align: center;
-  white-space: nowrap;
-  min-width: 0;
-}
+.tab-nav { position: relative; z-index: 10; display: flex; justify-content: center; gap: 0; background: var(--dark); border-bottom: 2px solid var(--gold-dim); padding: 0 20px; }
+.tab-btn { font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem; letter-spacing: 0.25em; color: #444; background: transparent; border: none; cursor: pointer; padding: 16px 40px; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color 0.25s, border-color 0.25s; text-transform: uppercase; }
 .tab-btn:hover { color: var(--gold-dim); }
 .tab-btn.active { color: var(--gold-bright); border-bottom-color: var(--gold); }
 .tab-content { display: none; }
 .tab-content.active { display: block; }
-
-@media (max-width: 560px) {
-  .tab-btn {
-    font-size: clamp(0.7rem, 3.5vw, 1rem);
-    letter-spacing: 0.06em;
-    padding: 14px 4px;
-  }
-}
 
 .apb-page { max-width: 1600px; width: 100%; margin: 0 auto; padding: 50px 32px 80px; position: relative; z-index: 1; }
 .apb-header { text-align: center; margin-bottom: 48px; }
@@ -541,10 +522,10 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
 }
 
 /* ═══════════════════════════════════════════
-   IMPORT BANNER
+   FILE SYSTEM ACCESS BANNER
 ═══════════════════════════════════════════ */
 
-.import-banner {
+.fsa-banner {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
@@ -554,13 +535,14 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.import-banner.connected {
+/* Cuando ambos archivos están conectados, el banner se colapsa */
+.fsa-banner.connected {
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }
 
-.import-banner-inner {
+.fsa-banner-inner {
   max-width: 780px;
   margin: 0 auto;
   display: flex;
@@ -570,13 +552,13 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   height: 48px;
 }
 
-.import-files {
+.fsa-files {
   display: flex;
   gap: 8px;
   flex-shrink: 0;
 }
 
-.import-file-btn {
+.fsa-file-btn {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -592,18 +574,17 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   cursor: pointer;
   clip-path: none;
   transition: border-color 0.2s, color 0.2s;
-  user-select: none;
 }
-.import-file-btn:hover {
+.fsa-file-btn:hover {
   border-color: var(--gold-dim);
   color: var(--gold-dim);
 }
-.import-file-btn.connected {
+.fsa-file-btn.connected {
   border-color: #1e3d1e;
   color: #4caf50;
 }
 
-.import-dot {
+.fsa-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -611,12 +592,12 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   flex-shrink: 0;
   transition: background 0.3s;
 }
-.import-file-btn.connected .import-dot {
+.fsa-file-btn.connected .fsa-dot {
   background: #4caf50;
   box-shadow: 0 0 5px rgba(76,175,80,0.5);
 }
 
-.import-status-text {
+.fsa-status-text {
   font-family: 'Rajdhani', sans-serif;
   font-size: 0.65rem;
   font-weight: 600;
@@ -626,7 +607,7 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
   text-align: right;
   flex: 1;
 }
-.import-status-text.ok {
+.fsa-status-text.ok {
   color: #2e6b2e;
 }
 
@@ -639,12 +620,14 @@ footer { position: relative; z-index: 1; text-align: center; padding: 30px; bord
 }
 
 /* Si el banner está colapsado, restaurar el offset */
-.import-banner.connected ~ .tab-nav {
+.fsa-banner.connected ~ .tab-nav {
   top: 0;
 }
 
-body.import-hidden .tab-nav  { top: 0; }
-body.import-hidden .tab-content { padding-top: calc(56px + 20px); }
+/* Nota: CSS no puede hacer el selector hermano para tab-content fácilmente,
+   así que usamos JS mínimo para toggling de clase en body */
+body.fsa-hidden .tab-nav  { top: 0; }
+body.fsa-hidden .tab-content { padding-top: calc(56px + 20px); }
 
 /* ═══════════════════════════════════════════
    MULTI-FIGHT EVENT CARDS
@@ -1131,7 +1114,7 @@ body.import-hidden .tab-content { padding-top: calc(56px + 20px); }
   border-bottom: 1px solid #1a1a1a;
 }
 
-body.import-hidden .tl-selector-wrap { top: 56px; }
+body.fsa-hidden .tl-selector-wrap { top: 56px; }
 
 .tl-event-selector {
   display: flex;
