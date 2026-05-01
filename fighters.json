@@ -1,8 +1,8 @@
 [
   {
-    "name": "JP \"MAKÉLÉLÉ\" Álvarez",
+    "name": "JP 'MAKÉLÉLÉ' Álvarez",
     "img": "jp_reus.png",
-    "w": 2,
+    "w": 3,
     "wko": 0,
     "l": 0,
     "lko": 0,
@@ -43,7 +43,7 @@
     "img": "Little_dick.png",
     "w": 1,
     "wko": 0,
-    "l": 2,
+    "l": 3,
     "lko": 1,
     "d": 0,
     "wsplit": 1,
@@ -69,7 +69,7 @@
     "img": "albeiro.png",
     "w": 0,
     "wko": 0,
-    "l": 4,
+    "l": 5,
     "lko": 3,
     "d": 0,
     "wsplit": 0,
@@ -115,7 +115,7 @@
     "lsplit": 0,
     "bonusPts": 0,
     "penalties": 0,
-    "penaltyPts": 5
+    "penaltyPts": 15
   },
   {
     "name": "Jeffrey Epstein",
@@ -128,7 +128,7 @@
     "wsplit": 0,
     "lsplit": 0,
     "bonusPts": 0,
-    "penaltyPts": 0
+    "penaltyPts": 10
   },
   {
     "name": "Der Kaiser",
@@ -172,7 +172,7 @@
   {
     "name": "JAlvarez el 'Dueño del Sistema'",
     "img": "jalvarez.png",
-    "w": 2,
+    "w": 3,
     "wko": 1,
     "l": 2,
     "lko": 1,

@@ -113,10 +113,10 @@
     "arena": "Arena Panenka",
     "fights": [
       {
-        "subtitle": "JP 'Little Dick' Fajardo vs JP Reus Álvarez",
+        "subtitle": "JP 'Little Dick' Fajardo vs JP 'MAKÉLÉLÉ' Álvarez 2",
         "f1": "JP 'Little Dick' Fajardo",
-        "f2": "JP \"MAKÉLÉLÉ\" Álvarez",
-        "winner": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "f2": "JP 'MAKÉLÉLÉ' Álvarez",
+        "winner": "JP 'MAKÉLÉLÉ' Álvarez",
         "method": "Decision",
         "isDraw": false,
         "isTitleBout": false,
@@ -314,7 +314,7 @@
     "penalties": [
       {
         "fighter": "Zinpelin Duzzan",
-        "pts": 5
+        "pts": 15
       }
     ]
   },
@@ -326,10 +326,10 @@
     "isPending": false,
     "fights": [
       {
-        "subtitle": "Juan Sevilla Vargas vs JP Reus Álvarez",
+        "subtitle": "Juan Sevilla Vargas vs JP 'MAKÉLÉLÉ' Álvarez",
         "f1": "Juan Sevilla Vargas",
-        "f2": "JP \"MAKÉLÉLÉ\" Álvarez",
-        "winner": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "f2": "JP 'MAKÉLÉLÉ' Álvarez",
+        "winner": "JP 'MAKÉLÉLÉ' Álvarez",
         "method": "Split Decision",
         "isDraw": false,
         "isTitleBout": true,
@@ -469,18 +469,25 @@
     "name": "UFC 17",
     "date": "30 ABR 2026",
     "arena": "Arena Panenka",
-    "isPending": true,
-    "penalties": [],
+    "isPending": false,
+    "penalties": [
+      {
+        "fighter": "Jeffrey Epstein",
+        "pts": 10
+      }
+    ],
     "fights": [
       {
-        "subtitle": "JP Reus Álvarez vs JP 'Little Dick' Fajardo 2",
-        "f1": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "subtitle": "JP 'MAKÉLÉLÉ' Álvarez vs JP 'Little Dick' Fajardo",
+        "f1": "JP 'MAKÉLÉLÉ' Álvarez",
         "f2": "JP 'Little Dick' Fajardo",
-        "winner": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "winner": "JP 'MAKÉLÉLÉ' Álvarez",
         "method": "Decision",
         "isDraw": false,
         "isTitleBout": true,
-        "titleBoutName": "THE CUSTODY OF MINI JP CHAMPIONSHIP BOUT"
+        "titleBoutName": "THE CUSTODY OF MINI JP CHAMPIONSHIP BOUT",
+        "bonus": 0,
+        "underdogName": null
       },
       {
         "subtitle": "JAlvarez el 'Dueño del Sistema' vs Albeiro Puvalgia 3",
@@ -490,7 +497,9 @@
         "method": "Decision",
         "isDraw": false,
         "isTitleBout": false,
-        "titleBoutName": ""
+        "titleBoutName": "",
+        "bonus": 0,
+        "underdogName": null
       }
     ]
   },
@@ -553,10 +562,10 @@
     "penalties": [],
     "fights": [
       {
-        "subtitle": "JP Reus Álvarez vs German Joven",
-        "f1": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "subtitle": "JP 'MAKÉLÉLÉ' Álvarez vs German Joven",
+        "f1": "JP 'MAKÉLÉLÉ' Álvarez",
         "f2": "German Joven",
-        "winner": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "winner": "JP 'MAKÉLÉLÉ' Álvarez",
         "method": "Decision",
         "isDraw": false,
         "isTitleBout": false,
@@ -633,10 +642,10 @@
         "titleBoutName": ""
       },
       {
-        "subtitle": "JP Reus Álvarez vs JAlvarez el 'Dueño del Sistema'",
-        "f1": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "subtitle": "JP 'MAKÉLÉLÉ' Álvarez vs JAlvarez el 'Dueño del Sistema'",
+        "f1": "JP 'MAKÉLÉLÉ' Álvarez",
         "f2": "JAlvarez el 'Dueño del Sistema'",
-        "winner": "JP \"MAKÉLÉLÉ\" Álvarez",
+        "winner": "JP 'MAKÉLÉLÉ' Álvarez",
         "method": "Decision",
         "isDraw": false,
         "isTitleBout": false,
